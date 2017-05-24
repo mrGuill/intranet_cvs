@@ -4,17 +4,21 @@ class pagesController{
 
 	const PAGESDIR = 'view/pages/';
 
-	public function login(){
+	public function login() {
 		require_once(self::PAGESDIR.'login.php');
 	}
 
-	public function home(){
+	public function home() {
 		require_once(self::PAGESDIR.'home.php');
 	}
 
-	// public function error(){
+	public function contact() {
+		require_once(self::PAGESDIR.'contact.php');
+	}
 
-	// }
+	public function error($errorMessage){
+		echo $errorMessage;
+	}
 
 }
 

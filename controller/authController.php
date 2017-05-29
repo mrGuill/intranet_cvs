@@ -3,6 +3,9 @@
 class authController {
 
 	public function auth() {
+		require_once('pagesController.php');
+		$pagesController = new PagesController;
+
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 
@@ -24,7 +27,7 @@ class authController {
 			header('Location: index.php'.$params);
 			
 		} else {
-			echo "Username or password incorrect.";
+			$pagesController->error("Username or password incorrect.");
 		}
 	}
 }

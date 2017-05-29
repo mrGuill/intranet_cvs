@@ -43,7 +43,7 @@ switch ($method) {
 				$controller = $_GET['controller'];
 				$action = $_GET['action'];
 			} else {
-				echo "You need to be logged-in to access this menu.";
+				// echo "You need to be logged-in to access this menu.";
 				// Par défaut, on affichera la page login.php à l'aide du pagesController;
 				$controller = "pages";
 				$action = "login";

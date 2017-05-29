@@ -16,8 +16,12 @@ class pagesController{
 		require_once(self::PAGESDIR.'contact.php');
 	}
 
+	public function info($infoMessage){
+		echo "<div class=\"alert alert-danger\">".$infoMessage."</div>";
+	}
+
 	public function error($errorMessage){
-		echo $errorMessage;
+		echo "<div class=\"alert alert-danger\">".$errorMessage."</div>";
 	}
 
 }

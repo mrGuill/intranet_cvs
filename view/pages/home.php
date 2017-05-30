@@ -3,7 +3,7 @@
 
 <body>
 
-	<h1>HOME</h1>
+	<h1>Home</h1>
 
 	<p>Bonjour <?php echo $_SESSION['firstName']; ?> <?php echo $_SESSION['lastName']; ?> !</p>
 

@@ -16,6 +16,18 @@ class pagesController{
 		require_once(self::PAGESDIR.'contact.php');
 	}
 
+	public function inventaire() {
+		require_once(self::PAGESDIR.'inventaire.php');
+	}
+
+	public function planning() {
+		require_once(self::PAGESDIR.'planning.php');
+	}
+
+	public function administratif() {
+		require_once(self::PAGESDIR.'administratif.php');
+	}
+
 	public function info($infoMessage){
 		echo "<div class=\"alert alert-danger\">".$infoMessage."</div>";
 	}

@@ -20,8 +20,9 @@
 
 	<div class="container">
 
-		<header>
-			<div class="page-header">INTRANET-CVS</div>
+		<header class="page-header">
+			<p>INTRANET-CVS</p>
+			<div class="media-right"><img src="view/images/cvsLogo.png" height="12%" width="12%"></div>
 		</header>
 
 		<?php 

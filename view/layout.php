@@ -6,7 +6,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>CVS Intranet</title>
+		<title>CVS | INTRANET</title>
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -18,14 +18,14 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 	</head>
 
-	<div class="container-fluid">
+	<div class="container">
 
 		<?php
 
-		require_once('pages/header.php');
+		require_once('element/header.php');
 		 
 		if (isset($_SESSION['loggedin'])){
-			require_once('pages/nav.php');
+			require_once('element/nav.php');
 		} else {}
 		?>
 
@@ -40,7 +40,7 @@
 		<?php 
 		
 		if (isset($_SESSION['loggedin'])){
-			require_once('pages/footer.php');
+			require_once('element/footer.php');
 		} else {}
 
 		?>

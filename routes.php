@@ -14,6 +14,9 @@ function call ($controller, $action, $arg = null){
 		case 'user':
 			$controller = new userController;
 			break;
+		case 'contact':
+			$controller = new contactController;
+			break;
 	}
 
 	$controller->$action($arg);

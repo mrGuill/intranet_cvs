@@ -22,6 +22,11 @@ class userController {
 		session_destroy();
 		header('Location: index.php');
 	}
+
+	public function register(){
+		
+	}
+
 }
 
 ?>

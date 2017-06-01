@@ -1,27 +1,28 @@
 <?php 
 
-class User {
+class Contact {
 
 	private $_id;
-	private $_username;
-	private $_password;
-	private $_mail;
 	private $_firstName;
 	private $_lastName;
+	private $_company;
+	private $_mail;
+	private $_phone;
+
 
 	public function __construct($id) {
 		$instance = databaseController::instance();
 		$connection = $instance->connection();
 
-		$sql = ('SELECT * FROM user WHERE id="'.$id.'"');
+		$sql = ('SELECT * FROM contact WHERE id="'.$id.'"');
 		$request = $connection->query($sql);
 		while ($result = $request->fetch()){
 			$this->_id = $result['id'];
-			$this->_username = $result['username'];
-			$this->_password = $result['password'];
-			$this->_mail = $result['mail'];
-			$this->_firstName = $result['firstName'];
-			$this->_lastName = $result['lastName'];
+			$this->_username = $result['firstName'];
+			$this->_password = $result['lastName'];
+			$this->_mail = $result['company'];
+			$this->_firstName = $result['mail'];
+			$this->_lastName = $result['phone'];
 		}
 	}
 
@@ -29,24 +30,24 @@ class User {
 		return $this->_id;
 	}
 
-	public function getUsername() {
+	public function getFirstName() {
 		return $this->_username;
 	}
 
 
-	public function getPassword() {
+	public function getLastName() {
 		return $this->_password;
 	}
 
-	public function getMail() {
+	public function getCompany() {
 		return $this->_mail;
 	}
 
-	public function getFirstName() {
+	public function getMail() {
 		return $this->_firstName;
 	}
 
-	public function getLastname() {
+	public function getPhone() {
 		return $this->_lastName;
 	}
 }

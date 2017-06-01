@@ -12,6 +12,10 @@ class pagesController{
 		require_once(self::PAGESDIR.'home.php');
 	}
 
+	public function news() {
+		require_once(self::PAGESDIR.'news.php');
+	}
+
 	public function planning() {
 		require_once(self::PAGESDIR.'planning.php');
 	}

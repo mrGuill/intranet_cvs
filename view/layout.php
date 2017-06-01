@@ -18,14 +18,12 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 	</head>
 
-	<div class="container">
+	<div class="container-fluid">
 
-		<header class="page-header">
-			<p>INTRANET-CVS</p>
-			<div class="media-right"><img src="view/images/cvsLogo.png" height="12%" width="12%"></div>
-		</header>
+		<?php
 
-		<?php 
+		require_once('pages/header.php');
+		 
 		if (isset($_SESSION['loggedin'])){
 			require_once('pages/nav.php');
 		} else {}
@@ -39,7 +37,13 @@
 			?>
 		</body>
 
-		<?php require_once('pages/footer.php'); ?>
+		<?php 
+		
+		if (isset($_SESSION['loggedin'])){
+			require_once('pages/footer.php');
+		} else {}
+
+		?>
 
 	</div>
 

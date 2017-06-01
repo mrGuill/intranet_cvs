@@ -12,20 +12,24 @@ class pagesController{
 		require_once(self::PAGESDIR.'home.php');
 	}
 
-	public function contact() {
-		require_once(self::PAGESDIR.'contact.php');
+	public function planning() {
+		require_once(self::PAGESDIR.'planning.php');
 	}
 
 	public function inventaire() {
 		require_once(self::PAGESDIR.'inventaire.php');
 	}
 
-	public function planning() {
-		require_once(self::PAGESDIR.'planning.php');
-	}
-
 	public function administratif() {
 		require_once(self::PAGESDIR.'administratif.php');
+	}
+
+	public function contact() {
+		require_once(self::PAGESDIR.'contact.php');
+	}
+
+	public function profile() {
+		require_once(self::PAGESDIR.'profile.php');
 	}
 
 	public function info($infoMessage){
